@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" tyøe="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <title>Oblig 3</title>
 </head>
 <body>
@@ -16,47 +16,89 @@
     </span>
 
     <!-- navigasjonsmeny-->
-    <nav>
+    <nav class="container">
+      <div class="1">
+        <a href="index.html" class="navLinks">HJEM</a>
+      </div>
+      <div class="2">
+        <a href="om-oss.html" class="navLinks">OM OSS</a>
+      </div>
+      <div class="3">
+        <a href="nyheter.html" class="navLinks">NYHETER</a>
+      </div>
+      <div class="4">
+        <a href="converse.html" class="navLinks">CONVERSE</a>
+      </div>
+      <div class="5">
+        <a href="product.html" class="navLinks">PRODUKT</a>
+      </div>
+       
+
       <!-- lager en liste med elementer som er i navigasjonsmenyen-->
-      <ul>
-        <!-- Liste elementet for hjem-->
+      <!-- <ul>
+        <-- Liste elementet for hjem--
         <li><a href="index.html">HJEM</a></li>
-        <!-- Liste elementet for Om Oss -->
+        !-- Liste elementet for Om Oss -
         <li><a href="om-oss.html">OM OSS</a></li>
-        <!-- Liste element for Produkt-->
+        !-- Liste element for Produkt-
         <li><a href="product.html">Produkt</a></li>
-        <!-- Liste element for støvletter-->
+        !-- Liste element for støvletter
         <li><a href="#">STØVLETTER</a></li>
-        <!-- Liste element for nyheter -->
+        !-- Liste element for nyheter 
         <li><a href="#">NYHETER></a> </li>
-      </ul>
+      </ul> -->
 
     </nav>
   </header>
   <!-- I main defineres hovedinnholdet på siden -->
   <main>
     <!-- Her opprettes en seksjon med klasse default-flex for å få en fleksibel layout-->
+    <!-- her vil hovedbilde vises som er i en egen seksjon-->
     <section class="default-flex">
       <!-- Overskrift med høstnyheter-->
-      <h2>Sjekk høstnyhetene</h2>
+      
+      
       <!-- Artikkel med høstnyheter-->
+      <!-- Bilde som møter besøkende med tekst-->
       <article>
+        <figure class="image">
+          <img src="img/HØST/host_couple_boots_uglydog_from_5688709.jpg" alt="bilde fra bruker 5688709">
+          <figcaption>Velkommen, høsten!</figcaption>
+        </figure>
+    
         <!-- Legger til hovedbilde -->
-        <img src="img/host_converse_Gerd_Altmann.jpg" alt="bilde fra Gerd Altmann med navn fall">
+       <!--<img src="img/HØST/host_couple_boots_uglydog_from_5688709.jpg" alt="bilde fra Gerd Altmann med navn fall" width="700" height="900"> -->
         <!-- overskrfit for høstnyhet som er i hovedbilde-->
         <h3>Høstmodellen fra Converse</h3>
+        <p>Sjekk flere nyheter her</p>
 
       </article>
-      <!-- Oppretter artikkel for to andre modeller -->
-      <article>
-        <img src="img/host_model_from_Alicija.jpg" alt="bilde fra Alicicja">
-        <img src="img/host_boots_from_keezia.jpg" alt="bilde fra Keezia">
-        <h3>Høstmodeller fra Awes0me sh0es </h3>
+    </section>
+    <section class="arrivals">
+      <h2>Flere nyheter fra.... </h2>
+
+   <!---<div class="wrapper"> -->
+      
+
+  
+      <!-- Oppretter artikkel for to andre modeller som er grid i css med navn .arrivals og .arrivals img -->
+      <article class="produkt">
+        <img src="img/CONVERSE/multi_converse_from_TheVirtualDenise.jpg" alt="bilde fra Alicicja" class="img-1">
+        <p>PRIS 1 984 KR</p>
+        <img src="img/CONVERSE/negro_converse_from_TheVirtualDenise.jpg" alt="bilde fra Keezia" classs="img-2">
+        <p>PRIS 5 99 KR</p>
+        
+
+        <!-- <h3>Høstmodeller fra Awes0me sh0es </h3>-->
+      
 
       </article>
 
     </section>
   </main>
+  <footer>
+
+  </footer>
   
 </body>
 </html>

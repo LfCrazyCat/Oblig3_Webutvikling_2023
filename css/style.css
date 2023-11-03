@@ -1,0 +1,347 @@
+/* gir en standard skrifttype for alt innhold */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* grid container som innheholder header, main og footer  */
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "content" "footer";
+}
+
+/* padding for å få mellomrom i header, main og footer */
+header, main, content, footer {
+  padding: 1rem;
+}
+/* styling for seksjonen header */
+header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-area: header;
+}
+
+/* gjør om til flex-box for navigasjonen*/
+header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* uten understrek på logo-link */
+/* 
+#logo {
+  text-decoration: none;
+} */
+
+/* standrad navigasjonmeny skjules */
+.navbar {
+  display: none;
+}
+
+/* responsive navigasjons meny styling */
+.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #242424;
+  margin: 0;
+  padding: 0;
+  top: 40px;
+  width: 100%;
+  list-style: none;
+}
+
+.responsive a {
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* stying på knapp */
+.white-btn {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: #5435;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+/* Main seksjonen styles i grid */
+main {
+  grid-area: main;
+}
+
+/* bildebredde 100% i main seksjon */
+main section img {
+  width: 100%;
+}
+
+main article img {
+  width: 100%;
+  padding: 
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Styler seksjonen for tjenester med flexboxer og farger 
+#services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #efefef;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+#services h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#services article {
+  max-width: 300px;
+  width: 100%;
+  min-width: 200px;
+} */
+
+/* Mobile first, for enheter og skjermer som har en bredde over 600px */
+@media only screen and (min-width: 600px) {
+/* grid malen endres */
+  #grid-container {
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+   }
+   /* her er den skjulte navmenyen som også skjulte menyikoner */
+   .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+   }
+
+   /* meeny ikoner skjuiles i header */
+   #ham, .fa-magnifying-glass {
+    display: none;
+   }
+
+   /* gir mellomrom av seksjonene som viser  bilder og tekst side by side */
+   .flex-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   }
+
+   /* bilder blir redusert til bredde 50% i flex-sections */
+   .flex-section img {
+    width: 50%;
+   }
+
+   /* gir noe mellomrom og justering i seksjoner med flex */
+   .flex-section section {
+    padding: 1rem;
+    width: 40%;
+    algin-self: center;
+   }
+
+   /* her blir rekkefølge for bilder og tekst endret, høyrejusterte seksjoner */
+   .right img {
+    order: 1;
+   }
+}
+
+
+/* DENNE SKAL GJELDE */
+
+html, body {
+  margin: auto;
+  padding: 1.5%;
+  background-color: #c8cae1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: em; /* kan fjernes */
+  overflow: visible;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-top: 10em; /* Kan fjernes */
+  align-items: center;
+  text-align: center;
+  border-bottom: 2.5px solid black;
+  border-top: 2.5px solid black;
+  background-color: gray;
+}
+/* for enheter og skjermer med vidde 900 */
+@media screen and (max-width: 900px) {
+  nav {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    display: none;
+ }
+}  
+
+.logo {
+  grid-column: right;
+  background-color: grey;
+  background-position: contain;
+  background-repeat: no-repeat;
+  height: 8vh; 
+}
+/* Kolonner i header/navigasjons header */
+.1 {
+  grid-column: 1;
+}
+
+.2 {
+  grid-column: 2;
+}
+
+.3 {
+  grid-column: 3;
+}
+
+.4 {
+  grid-column: 4;
+}
+
+.5 {
+  grid-column: 5;
+}
+
+/* font, størrelse i navigasjonsmenyen */
+.navLinks {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase; 
+  text-decoration: none;
+  color: black;
+}
+
+.navLinks:hover {
+  color: rgb(221, 205, 143);
+  border-left: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  padding: 0.5em 0.5em;
+}
+
+#twist {
+  color: blue;
+} 
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 3.5em;
+}
+
+h2 {
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: 2.5em;
+  padding-top: 15px;
+  margin: 0;
+ }
+
+ h3 {
+  font-family: arial, helvetica, sans-serif;
+  color: black;
+  font-size: 1.5em;
+  padding-top: 10px;
+  margin: 0;
+ }
+
+ p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 18px;
+  padding-top: 0.2%;
+  margin: 1.5%;
+ }
+
+
+/* ALTERNATIV GRID SECTION */
+/* g-t-c har ingen effekt her */
+/* sentrerer innholdet til å ligge i vcenter */
+
+ section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: solid;
+  text-transform: uppercase;
+  /* 
+  grid-template-columns: 15% 60% 25%; */
+  background-color: rgb(240, 233, 233);
+  margin: auto; /* kan fjernes */
+  padding: 0px; /* kan fjernes */
+  text-align: center;
+  place-content: space-around; /* kan fjernes */
+
+ }
+
+ /* første bilde som møter kunden */
+ .image img {
+  width: 100%;
+  height: 100%;
+ } 
+ .image {
+  position: relative;
+ }
+ /* Justerer slik at tekst faller over bilde */
+ /* ønsker at teksten faller på bakgrunnen på bilde, slik at tekst blir mer synlig */
+ .image figcaption {
+  position: absolute;
+  top: 5%;
+  bottom: 95%;
+  left: 40%;
+  font-size: 40px;
+  font-style: italic;
+  color: #000000f8;
+  text-decoration: solid;
+  font-family: fantasy;
+  padding: 20px;
+
+ }
+ .arrivals {
+  display: grid;
+  align-content: space-around;
+  grid-template-columns: ;
+  grid-column: auto;
+  margin:10px;
+  /* text-align: center */
+ }
+ .arrivals img{
+  display: 
+  width: 50%;
+  height: 50%;
+ }
+
+ .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+ }
+ 
+ .gallery img{
+  width: 100%;
+ }
+ .gallery h2{
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  display: grid;
+  grid-gap: 20px;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;;
+ }
