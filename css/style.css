@@ -311,20 +311,20 @@ h2 {
   font-family: fantasy;
   padding: 20px;
 
- }
- .arrivals {
-  display: grid;
-  align-content: space-around;
-  grid-template-columns: ;
-  grid-column: auto;
-  margin:10px;
-  /* text-align: center */
- }
- .arrivals img{
-  display: 
-  width: 50%;
-  height: 50%;
- }
+  /*.Teksten på bilder/linker. Bruker kun fargen for å ha en sterk farge  */  
+  
+  .wrapper figcaption {
+    position: absolute;
+    top:25%;
+    bottom: 75%;
+    left: 30%;
+    font-style: 60px;
+    font-style: italic;
+    color: #18ffa8;
+  }
+
+ 
+ 
 
  .gallery{
   display: grid;
