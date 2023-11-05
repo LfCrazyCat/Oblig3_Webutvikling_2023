@@ -1,32 +1,37 @@
 /* gir en standard skrifttype for alt innhold */
+/*
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* grid container som innheholder header, main og footer  */
+/*
 #grid-container {
   display: grid;
   grid-template-areas: "header" "main" "content" "footer";
-}
+} */
 
 /* padding for å få mellomrom i header, main og footer */
+/*
 header, main, content, footer {
   padding: 1rem;
 }
 /* styling for seksjonen header */
+/*
 header {
   font-size: 1.5rem;
   font-weight: 600;
   grid-area: header;
-}
+} 
 
 /* gjør om til flex-box for navigasjonen*/
+/*
 header nav {
   display: flex;
   justify-content: space-between;
   position: relative;
 }
-
+/*
 /* uten understrek på logo-link */
 /* 
 #logo {
@@ -34,12 +39,15 @@ header nav {
 } */
 
 /* standrad navigasjonmeny skjules */
+/*
 .navbar {
   display: none;
 }
 
-/* responsive navigasjons meny styling */
-.responsive {
+ responsive navigasjons meny styling */
+
+/* 
+ .responsive {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -58,7 +66,7 @@ header nav {
   text-decoration: none;
 }
 
-/* stying på knapp */
+/* stying på knapp 
 .white-btn {
   display: inline-block;
   padding: 1rem;
@@ -68,25 +76,29 @@ header nav {
   border-radius: 5px;
   font-weight: 400;
 }
+*/
 
 /* Main seksjonen styles i grid */
+/*
 main {
   grid-area: main;
-}
+} */
 
 /* bildebredde 100% i main seksjon */
+/*
 main section img {
   width: 100%;
-}
+} */
+/*
 
 main article img {
   width: 100%;
-  padding: 
-}
+  /* padding: none;*/
 
+/*
 footer {
   grid-area: footer;
-}
+} */
 
 /* Styler seksjonen for tjenester med flexboxer og farger 
 #services {
@@ -110,12 +122,13 @@ footer {
 } */
 
 /* Mobile first, for enheter og skjermer som har en bredde over 600px */
+/*
 @media only screen and (min-width: 600px) {
-/* grid malen endres */
+/* grid malen endres *
   #grid-container {
     grid-template-areas: "header header header" "main main main" "footer footer footer";
    }
-   /* her er den skjulte navmenyen som også skjulte menyikoner */
+    her er den skjulte navmenyen som også skjulte menyikoner 
    .navbar {
     display: flex;
     flex-direction: row;
@@ -123,36 +136,36 @@ footer {
     list-style: none;
     margin: 0;
    }
-
+    */
    /* meeny ikoner skjuiles i header */
-   #ham, .fa-magnifying-glass {
+  
+  /*  #ham, .fa-magnifying-glass {
     display: none;
-   }
+   } */
 
-   /* gir mellomrom av seksjonene som viser  bilder og tekst side by side */
+   /* gir mellomrom av seksjonene som viser  bilder og tekst side by side 
    .flex-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   }
+   } */
 
-   /* bilder blir redusert til bredde 50% i flex-sections */
+   /* bilder blir redusert til bredde 50% i flex-sections 0
    .flex-section img {
     width: 50%;
    }
 
-   /* gir noe mellomrom og justering i seksjoner med flex */
+   /* gir noe mellomrom og justering i seksjoner med flex 
    .flex-section section {
     padding: 1rem;
     width: 40%;
     algin-self: center;
    }
 
-   /* her blir rekkefølge for bilder og tekst endret, høyrejusterte seksjoner */
+   /* her blir rekkefølge for bilder og tekst endret, høyrejusterte seksjoner 
    .right img {
     order: 1;
-   }
-}
+   } */
 
 
 /* DENNE SKAL GJELDE */
@@ -162,21 +175,11 @@ html, body {
   padding: 1.5%;
   background-color: #c8cae1;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: em; /* kan fjernes */
+  font-size: 2px; /* kan fjernes */
   overflow: visible;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: auto;
-  grid-top: 10em; /* Kan fjernes */
-  align-items: center;
-  text-align: center;
-  border-bottom: 2.5px solid black;
-  border-top: 2.5px solid black;
-  background-color: gray;
-}
+
 /* for enheter og skjermer med vidde 900 */
 @media screen and (max-width: 900px) {
   nav {
@@ -186,41 +189,55 @@ nav {
     display: none;
  }
 }  
-
-.logo {
+/*
+.logo { /* kan kanskje legges med 
   grid-column: right;
   background-color: grey;
   background-position: contain;
   background-repeat: no-repeat;
   height: 8vh; 
-}
-/* Kolonner i header/navigasjons header */
-.1 {
-  grid-column: 1;
+} */
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-row:auto; /* Kan fjernes */
+  align-items: center;
+  text-align: center;
+  border-bottom: 2.5px solid black;
+  border-top: 2.5px solid black;
+  background-color: gray;
 }
 
-.2 {
-  grid-column: 2;
+/* Kolonner i header/navigasjons header */
+.1   
+{
+  grid-column::1;
+}
+
+.2   
+{
+  grid-column:2;
 }
 
 .3 {
-  grid-column: 3;
+  grid-column:3;
 }
 
 .4 {
-  grid-column: 4;
+  grid-column:4;
 }
 
 .5 {
-  grid-column: 5;
+  grid-column:5;
 }
 
 /* font, størrelse i navigasjonsmenyen */
 .navLinks {
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-size: 25em;
   text-transform: uppercase; 
-  text-decoration: none;
+  text-decoration: solid;
   color: black;
 }
 
