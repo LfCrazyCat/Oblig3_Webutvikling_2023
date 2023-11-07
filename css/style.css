@@ -178,6 +178,15 @@ html, body {
   font-size: 2px; /* kan fjernes */
   overflow: visible;
 }
+/* SØKEFELT ØVERST */
+/*
+label {
+  display: inline;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+input, label { 
+  margin: 0.4rem 0;
+} */
 
 
 /* for enheter og skjermer med vidde 900 */
@@ -189,14 +198,15 @@ html, body {
     display: none;
  }
 }  
-/*
-.logo { /* kan kanskje legges med 
+
+.logo { /* kan kanskje legges med */ 
   grid-column: right;
-  background-color: grey;
+  background-color: none;
   background-position: contain;
   background-repeat: no-repeat;
-  height: 8vh; 
-} */
+  height: 5.5vh; 
+} 
+
 nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -204,15 +214,15 @@ nav {
   grid-row:auto; /* Kan fjernes */
   align-items: center;
   text-align: center;
-  border-bottom: 2.5px solid black;
-  border-top: 2.5px solid black;
+  border-bottom: 3.5px solid black;
+  border-top: 3.5px solid black;
   background-color: gray;
 }
 
 /* Kolonner i header/navigasjons header */
 .1   
 {
-  grid-column::1;
+  grid-column:1;
 }
 
 .2   
@@ -229,7 +239,20 @@ nav {
 }
 
 .5 {
-  grid-column:5;
+  
+}
+.nav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:#18ffa8;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.nav .search-container button:hover {
+  background: #ccc;
 }
 
 /* font, størrelse i navigasjonsmenyen */
@@ -298,9 +321,9 @@ h2 {
   text-transform: uppercase;
   /* 
   grid-template-columns: 15% 60% 25%; */
-  background-color: rgb(240, 233, 233);
+  background-color:#9ea1c3;
   margin: auto; /* kan fjernes */
-  padding: 0px; /* kan fjernes */
+  padding: 1px; /* kan fjernes */
   text-align: center;
   place-content: space-around; /* kan fjernes */
 
@@ -317,16 +340,17 @@ h2 {
  /* Justerer slik at tekst faller over bilde */
  /* ønsker at teksten faller på bakgrunnen på bilde, slik at tekst blir mer synlig */
  .image figcaption {
-  position: absolute;
-  top: 5%;
+  position: fixed;
+  top: 15%;
   bottom: 95%;
-  left: 40%;
-  font-size: 40px;
+  left: 35%;
+  font-size: 65px;
   font-style: italic;
-  color: #000000f8;
+  color: #ffc107;
   text-decoration: solid;
-  font-family: fantasy;
+  font-family: none;
   padding: 20px;
+ }
 
   /*.Teksten på bilder/linker. Bruker kun fargen for å ha en sterk farge  */  
   
@@ -389,6 +413,11 @@ h2 {
       margin: 0 8px;
       color: inherit;
       opacity: 0.75;
+      max-height: inherit;
+    }
+
+    .footer-basic img {
+      height: 50%;
     }
 
     .footer-basic .social > a:hover {

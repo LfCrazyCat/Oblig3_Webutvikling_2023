@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <title>Oblig 3</title>
+  <link rel="stylesheet" href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/" type="text/css">
+  <title>OM OSS</title>
 </head>
 <body>
   
@@ -12,8 +13,9 @@
     <!-- Pakker inn elementet span for å pakke inn rundt logo-->
     <span>
       <!-- innpakker logo id-->
-      <a href="#" id="logo">Logo</a>
+     <a href="index.html" class="logo"><img src="img/logo_cat.PNG" alt="logo"></a>
     </span>
+
 
     <!-- navigasjonsmeny-->
     <nav class="container">
@@ -32,13 +34,101 @@
       <div class="5">
         <a href="product.html" class="navLinks">PRODUKT</a>
       </div>
-    </nav>¨
+    </nav>
+
+    <!-- hamburgermeny for mobilversjoner-->
+    <input type="cheackbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger-menu">
+      <span class="bar"></span>
+      <span class="bar"></span> 
+      <span class="bar"></span>
+     </label>
+
   </header>
 
   <main>
-    <section>
+    <section class="flex">
+      <h1>
+        Nuestros empleados en la tienda 
+      </h1>
+      <article> <!-- artikkel om ansatt-->
+        <h5>Lila Shampoo</h5>
+          <img src="#" alt="bilde">
+      </article>
+
       <article>
-        
+        <h5>The Boss</h5>
+        <img src="#" alt="bilde">
+      
+      </article>
+      <article>
+        <h5>The Lowkey</h5>
+        <img src="#" alt="bilde">
       </article>
     </section>
+    
   </main>
+
+  <div class="footer-basic">
+    <footer>
+      <div class="social">
+
+        <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
+          <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
+          <i class="icon ion-social-instagram"></i></a>
+
+        <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
+          <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
+          <i class="icon ion-social-snapchat"></i></a>
+          
+         <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
+          <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
+          <i class="icon ion-social-instagram"></i></a> 
+      </div>
+
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="om-oss.html">Om oss</a> </li>
+        <li class="list-inline-item"><a href="#">Kontaktinformasjon</a> </li>
+        <li class="list-inline-item"><a href="#">Vilkår og retur</a> </li>
+        <li class="list-inline-item"><a href="#">Sosiale medier</a></li>
+        <li class="list-inline-item"><a href="#">Cookies og personvern</a> </li>
+        <li class="list-inline-item"><a href="#">Vanlige spørsmål </a> </li>
+      </ul>
+      <p class="copyright">Oblig Nettbutikk AS © 2023</p>
+    </footer>
+    </footer>
+  </div>
+</body>
+<script>
+
+  //SCRIPT FÖR ATT VISA OCH FÖLJA MENYKNAPP I MOBILVY
+  document.addEventListener("DOMContentLoaded", function () {
+    //SKAPAR UPP VARIABLER FÖR DE OLIKA HTML ELEMENTEN SOM SKA PÅVERKAS
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    //DÖLJER MENYN SOM DEFAULT OM SKÄRMEN ÄR MINDRE ÄN 900px
+    if (window.innerWidth <= 900) {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "grid";
+    }
+    //VISAR OCH DÖLJER MENY NÄR KNAPP TRYCKS PÅ
+    menuToggle.addEventListener("change", function () {
+      if (menuToggle.checked) {
+        nav.style.display = "flex";
+      } else {
+        if (window.innerWidth <= 900) {
+          nav.style.display = "none";
+        }
+      }
+    });
+
+    //VISAR ALLTID HAMBURGARMENY OAVSETT KLICKSTADIE
+    hamburgerMenu.style.display = "block";
+  });
+</script>
+</html>
+
+  

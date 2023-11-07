@@ -5,33 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link href="css/icon/fontawesome-free-6.4.2-web.css/" rel="stylesheet">
-  <link href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/" rel="stylesheet">
-  <title>Oblig 3</title>
+  <link href="css/icon/fontawesome-free-6.4.2-web.css/" rel="text">
+  <link href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/" rel="text">
+  <title>INDEX HTML OBLIG3</title>
 </head>
 <body>
   
   <header>
+    <!-- Lager søkefelt -->
+    <!-- 
+    <label for="site-search">Søk her! </label>
+    <input type="search" id="site-search" mname="q" />
+    
+    <button>Søk</button> 
+    <form action="/action_page.php">
+      <label for="search-site"></label>
+      <input type="search" id="site-search">
+      <input type="submit">
+    </form> -->
+    
     <!-- Pakker inn elementet span for å pakke inn rundt logo-->
     <span>
       <!-- innpakker logo id-->
-      <a href="#" id="logo">Logo</a>
+      <img class="logo" img src="img/logo_cat.PNG" alt="logo">
     </span>
 
     <!-- navigasjonsmeny-->
     <nav class="container">
       <div class="1">
-        <a href="index.html" class="navLinks">HJEM</a>|
+        <a href="index.html" class="navLinks">HJEM</a>
       </div>
       <div class="2">
-        <a href="om-oss.html" class="navLinks">OM OSS</a>|
+        <a href="om-oss.html" class="navLinks">OM OSS</a>
       </div>
       <div class="3">
-        <a href="nyheter.html" class="navLinks">NYHETER</a>|
+        <a href="nyheter.html" class="navLinks">NYHETER</a>
       </div>
       <div class="4">
-        <a href="converse.html" class="navLinks">CONVERSE</a>|
+        <a href="converse.html" class="navLinks">CONVERSE</a>
       </div>
+      <div class="Search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Noe du ser etter?" name="search">
+            <button type="submit">Søk her</button>
+    </div>
+     
+
+      <!-- 
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search here" name="Search">
+          <botton type="submit"><i class="fa fa-search"></i> </botton>
+        </form>
+      </div>-->
+    
       <!--
       <div class="5">
         <a href="product.html" class="navLinks">PRODUKT</a>
@@ -82,33 +109,40 @@
       <article>
         <figure class="image">
           <img src="img/HØST/host_model_from_Alicija.jpg" alt="bilde fra Alicija">
-          <figcaption>Høstkmodellen Em</figcaption>
+          <figcaption><a href="#" class="imagelink">Overgangssko</a> </figcaption>
           </figure>
         </article>
 
-     <article>
+     <!-- Artikkeø-->
+        <article>
       <figure class="image">
         <img src="img/HØST/host_boots_brown_from_Pexels.jpg" alt="bilde fra Alicija">
-        <a href="#"></a>
-        <figcaption>Høstmodell trem</figcaption>
+        <figcaption><a href="nyheter.html" class="imagelink">Nyheter</a></figcaption>
       </figure>
      </article>
 
-   <!---<div class="wrapper"> -->
-      
+  
+      <!-- Ny artikkelø-->
     <article>
       <figure class="image">
         <img src="img/HØST/lave_host_modell_fra_6318832.jpg" alt="bilde fra 6318832">
-        <figcaption>
-          Lave sko er kult
-        </figcaption>
+        <figcaption><a href="#" class="imagelink">Lave høstmodeller</a> </figcaption>
+      </figure>
+    </article>
+
+    <!-- Ny artikkel-->
+    <article>
+      <figure class="image">
+        <img src="img/NIÑOS/la_nina_y_pequito_from_Congerdesign.jpg" alt="bilde fra brukern CongerDesign">
+        <figcaption><a href="#" class="imagelink">Zapatos para niños er muy bueno</a></figcaption>
       </figure>
     </article>
 
     <article>
       <figure class="image">
-        <img src="img/NIÑOS/la_nina_y_pequito_from_Congerdesign.jpg" alt="bilde fra brukern CongerDesign">
-        <figcaption>Zapatos para niños er muy bueno</figcaption>
+        <img src="img/HØST/host_boots_from_keezia.jpg" alt="bilde fra brukeren Keezia">
+        <a href="#" class="links"></a>
+        <ficaption>Vintersko</ficaption>
       </figure>
     </article>
 
@@ -121,30 +155,49 @@
 
     </section>
   </main>
-  <div class="icon"> <i class="fa fa-fire"></i> </div>
+  <!-- <div class="icon"> <i class="fa fa-fire"></i> </div> -->
 <!-- Lager en footer--->
-<!--
+
     <div class="footer-basic">
       <footer>
-        -Legger til icons fra Fontawesome, som vi gi ikoner for sosiale medier som Instagram, Snapchat og Facebook--
-        <-- Det vil gjelde alle som omfatter delen social (altså for sosiale medier)--
+        <!-- Legger til icons fra Fontawesome, som vi gi ikoner for sosiale medier som Instagram, Snapchat og Facebook -->
+        
 
-        <div class="social"> !--HÅPER AT DET IKKE BLIR FOR MYE ID ELEMENTER, MEN VURDERTE Å SETTE DET FOOTER I EN EGEN SECTION 
-          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg"><i class="icon ion-social-instagram"></i></a> !-- INSTAGRAM IKON--
-          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg"><i class="icon ion-social-snapchat"></i></a> !-- SNAPCHAT IKOM --
-          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg"><i class="icon ion-social-facebook"></i></a> !--FACEBOOK IKON--
+         <!-- Måtte gjøre på denne måten slik at de sosiale medier icons blir synlig-->
+         <div class="social">
+          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
+            <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/instagram.svg">
+            <i class="icon ion-social-instagram"></i>
+          </a>
+          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
+            <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/snapchat.svg">
+            <i class="icon ion-social-snapchat"></i>
+          </a>
+          <a href="css/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
+            <img src="css/icon/fontawesome-free-6.4.2-web/svgs/brands/facebook-f.svg">
+            <i class="icon ion-social-facebook"></i>
+          </a>
          </div>
-        <ul class="list-inline">
+ 
+         <!--- Lager liste til footer og kundeinfoasjon --> 
+         <ul class="list-inline">
+            <!-- Om oss-->
           <li class="list-inline-item"><a href="om-oss.html">Om oss</a> </li>
-          <li class="list-inline-item"><a href="#">Kontakt</a> </li>
+          <!--Kontakt -->
+          <li class="list-inline-item"><a href="#">Kontaktinformasjon</a> </li>
+          <!-- Vilkår og retur-->
           <li class="list-inline-item"><a href="#">Vilkår & retur</a> </li>
+          <!--Sosiale medier-->
           <li class="list-inline-item"><a href="#">Sosiale medier</a></li>
-          <li class="list-inline-item"><a href="#">Cookies</a> </li>
+          <!--Cookes og personvern-->
+          <li class="list-inline-item"><a href="#">Cookies og personvern</a> </li>
+          <!-- Vanlige spørsmål-->
           <li class="list-inline-item"><a href="#">Vanlige spørsmål </a> </li>
         </ul>
+        <!-- Copyright-->
         <p class="copyright">Oblig Nettbutikk AS  ©  2023</p>
       </footer>
-    </div>-->
+    </div>
 
 <!-- 
     <a href="om-oss.html">Om oss</a>|
@@ -159,4 +212,35 @@
 
   
 </body>
+<!-- Lagt til script som viser og følger menyknapp i mobile enheter/ smalere enheter-->
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    // Skaper variabler for de ulike html elemene som skal påvirkes //
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Gjemmer menyen til desktop for mobilenhgeter//
+    if (window.innerWidth <= 900) {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "grid";
+    }
+    // Viser og fjerner meny knaooer når det trykkews på og fjerner nenyen //
+
+    menuToggle.addEventListener("change", function () {
+      if (menuToggle.checked) {
+        nav.style.display = "flex";
+      } else {
+        if (window.innerWidth <= 900) {
+          nav.style.display = "none";
+        }
+      }
+    });
+// Viser alltid harmbuergermenty unsett klikk, 
+
+    hamburgerMenu.style.display = "block";
+  });
+</script>
 </html>
