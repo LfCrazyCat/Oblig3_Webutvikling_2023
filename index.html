@@ -102,61 +102,62 @@
     <span class="bar"></span>
     <span class="bar"></span>
   </label>
-  
+
   </header>
   <!-- I main defineres hovedinnholdet på siden -->
   <main>
-    <!-- Her opprettes en seksjon med klasse default-flex for å få en fleksibel layout-->
-    <!-- her vil hovedbilde vises som er i en egen seksjon-->
-    <section class="default-flex">
-      <!-- Overskrift med høstnyheter-->
-      
-      
-      <!-- Artikkel med høstnyheter-->
-      <!-- Bilde som møter besøkende med tekst-->
-      <article>
+
+    <!-- Her opprettes en seksjon med klasse default-flex for å få en fleksibel layout- men selv om det kun er ett bilde med tekst, er ikke dette noe som
+    kan linkes til, setter det derfor som egen seksjon og ikke som en article med artiklene under, de får egen seksjon med forskjelige artikler-->
+      <section class="default-flex">
+        
+        <!-- Første artikkel som er et velkomstbilde med tekst -->
+       <article>
         <figure class="image">
+           <!-- Legger til hovedbilde -->
           <img src="img/HØST/host_couple_boots_uglydog_from_5688709.jpg" alt="bilde fra bruker 5688709">
+           <!-- overskrfit for høstnyhet som er i hovedbilde er satt i figcaption-->
           <figcaption>Velkommen, høsten!</figcaption>
         </figure>
-    
-        <!-- Legger til hovedbilde -->
-       <!--<img src="img/HØST/host_couple_boots_uglydog_from_5688709.jpg" alt="bilde fra Gerd Altmann med navn fall" width="700" height="900"> -->
-        <!-- overskrfit for høstnyhet som er i hovedbilde-->
-         </article>
+      </article>
     </section>
 
-
+    <!-- Nå åpner det en ny seksjon som kalles for wrapper, denne har flere artikkeltyper (forskjellige typer sko )-->
     <section class="wrapper">
 
-      <article>
+      <!-- Første artikkel i wrapper seksjonen -->
+       <article>
         <figure class="image">
           <img src="img/HØST/host_model_from_Alicija.jpg" alt="bilde fra Alicija">
+          <!-- I figcaption har jeg lagt ved link på teksten som hadde ført til den siden om den fantes -->
           <figcaption><a href="#" class="imagelink">Overgangssko</a> </figcaption>
           </figure>
         </article>
 
-     <!-- Artikkeø-->
-        <article>
-      <figure class="image">
+     <!-- Andre artikkel i wrapper seksjonen-->
+       <article>
+        <figure class="image">
         <img src="img/HØST/host_boots_brown_from_Pexels.jpg" alt="bilde fra Alicija">
+        <!-- I figcaption har jeg lagt ved link til nyheter.html på teksten -->
         <figcaption><a href="nyheter.html" class="imagelink">Nyheter</a></figcaption>
       </figure>
      </article>
 
   
-      <!-- Ny artikkelø-->
+      <!--Tredje artikkel i wrapper seksjoenn -->
     <article>
       <figure class="image">
         <img src="img/HØST/lave_host_modell_fra_6318832.jpg" alt="bilde fra 6318832">
+        <!-- I figcaption har jeg lagt ved link på teksten som hadde ført til den siden om den fantes -->
         <figcaption><a href="#" class="imagelink">Lave høstmodeller</a> </figcaption>
       </figure>
     </article>
 
-    <!-- Ny artikkel-->
+    <!-- Fjerde artikkel-->
     <article>
       <figure class="image">
         <img src="img/NIÑOS/la_nina_y_pequito_from_Congerdesign.jpg" alt="bilde fra brukern CongerDesign">
+        <!-- I figcaption har jeg lagt ved link på teksten som hadde ført til den siden om den fantes -->
         <figcaption><a href="#" class="imagelink">Zapatos para niños er muy bueno</a></figcaption>
       </figure>
     </article>
@@ -164,17 +165,12 @@
     <article>
       <figure class="image">
         <img src="img/HØST/host_boots_from_keezia.jpg" alt="bilde fra brukeren Keezia">
-        <a href="#" class="links"></a>
-        <ficaption>Vintersko</ficaption>
+        <!-- I figcaption har jeg lagt ved link som skaø fære videre til nettop dette produktet -->
+        <ficaption><a href="product.html" class="imagelink">Modell</a></ficaption>
       </figure>
     </article>
 
-  
-      <!-- Oppretter artikkel for to andre modeller som er grid i css med navn .arrivals og .arrivals img -->
-      
-        
-
-        <!-- <h3>Høstmodeller fra Awes0me sh0es </h3>-->
+    <!-- Alle artiklene med produkter og diverse bilder er nå ferdig -->
 
     </section>
   </main>
