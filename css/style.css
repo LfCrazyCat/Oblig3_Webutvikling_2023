@@ -170,6 +170,10 @@ footer {
 
 /* DENNE SKAL GJELDE */
 
+
+
+
+
 html, body {
   margin: auto;
   padding: 1.5%;
@@ -178,6 +182,21 @@ html, body {
   font-size: 1em; /* kan fjernes */
   overflow: visible;
 }
+
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "content" "footer"
+}
+
+header, main, content, footer {
+  padding: 1.2rem;
+}
+
+ header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  grid-area: header;
+ }
 
 .logo {
   top: 50px;
@@ -189,16 +208,17 @@ html, body {
 
 }
 
-/* CSS - For handlekurv, bla mobilvy */
+/* CSS - For handlekurv */
 .shopping-cart img {
   width: 35px;
   height: 33px;
   display: block;
   cursor: pointer;
-  position: absolute: 
-  top: 55px;
+  position: fixed;
+  top: 65px;
   right:100px;
 }
+
 
 /* For søkefelt */
 input[type=text] {
@@ -259,8 +279,8 @@ input[type=text] {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: black;¨
-    margin: 6px 0;
+    background-color: black;
+    margin: 6px;
 
   }
 }
@@ -303,7 +323,7 @@ input[type=text] {
     top: 5%;
     right: 40%;
     padding: 12px;
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 /* Kolonner i header/navigasjons header */
@@ -325,8 +345,11 @@ input[type=text] {
 
 .5 {
   grid-column: 5;
-  
-}
+  }
+
+  #twist {
+    color: blue;
+  }
 
 /* Styling av header seksjonen 
 header {
