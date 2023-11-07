@@ -26,12 +26,17 @@
     
     <!-- Pakker inn elementet span for å pakke inn rundt logo-->
     <span>
+
       <!-- innpakker logo id-->
       <img class="logo" img src="img/logo_cat.PNG" alt="logo">
     </span>
 
+    <!-- innputt for å kunne lage søkefelt-->
+    <input type="text" placeholder="Søk her...">
+
+
     <!-- navigasjonsmeny-->
-    <nav class="container">
+    <nav class="container" style="display: flex;">
       <div class="1">
         <a href="index.html" class="navLinks">HJEM</a>
       </div>
@@ -44,14 +49,19 @@
       <div class="4">
         <a href="converse.html" class="navLinks">CONVERSE</a>
       </div>
+      <div class="5">
+        <a href="product.html" class="navLinks">Produkt</a>
+      </div>
+      <!-- Kan også legge til søkebar her-->
+     <!--
       <div class="Search-container">
         <form action="/action_page.php">
             <input type="text" placeholder="Noe du ser etter?" name="search">
             <button type="submit">Søk her</button>
-    </div>
+    </div> --> 
      
 
-      <!-- 
+      <!-- eller på denne måten
       <div class="search-container">
         <form action="/action_page.php">
           <input type="text" placeholder="Search here" name="Search">
@@ -80,6 +90,10 @@
       </ul> -->
 
     </nav>
+    <!-- ikon for handlevogn -->
+    <a href="#" class="shopping-cart">
+      <img src="css/icon/fontawesome-free-6.4.2-web/svgs/solid/cart-shopping.svg">
+    </a>
   </header>
   <!-- I main defineres hovedinnholdet på siden -->
   <main>
@@ -222,25 +236,49 @@
     const hamburgerMenu = document.querySelector(".hamburger-menu");
 
     // Gjemmer menyen til desktop for mobilenhgeter//
-    if (window.innerWidth <= 900) {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "grid";
-    }
-    // Viser og fjerner meny knaooer når det trykkews på og fjerner nenyen //
-
-    menuToggle.addEventListener("change", function () {
-      if (menuToggle.checked) {
-        nav.style.display = "flex";
-      } else {
-        if (window.innerWidth <= 900) {
+    function updateMenuVisbility() {
+      if (window.innerWidth <= 900) {
+        if (menuToggle.checked) {
+          nav.style.display = "flex";
+        } else {
           nav.style.display = "none";
         }
+      } else {
+        nav.style.display = "flex";
+        menu.Toggle.checked = false;
       }
+     }
+    
+     // meny synlighet //
+     updateMenyVisibility();
+     // sjekker etter forandring av størrelse //
+     window.addEventListener("resize", updateMenuVisibility);
+     // viser og gjemmer meny knapp når den blior trykket på //
+     menuToggle.addEventListener("change", function() {
+      if (window.innerWidth <= 900) {
+        updateMenuVisibility();
+      }
+     });
+
+     //viser alltid hamburgermeny uansett klikk
+     hamburgerMeny.style.display = "block";
     });
+
+
+  
+
+   // menuToggle.addEventListener("change", function () { //
+     // if (menuToggle.checked) {
+      //  nav.style.display = "flex";
+      // } else {
+       // if (window.innerWidth <= 900) {
+        //  nav.style.display = "none";
+       // }
+     // }
+   // });
 // Viser alltid harmbuergermenty unsett klikk, 
 
-    hamburgerMenu.style.display = "block";
-  });
+   // hamburgerMenu.style.display = "block";
+ // });
 </script>
 </html>

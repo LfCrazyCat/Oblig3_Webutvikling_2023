@@ -178,6 +178,119 @@ html, body {
   font-size: 2px; /* kan fjernes */
   overflow: visible;
 }
+/* Logo justering størrelse */
+.logo img {
+  display: flex;
+  width: 15%;
+  
+}
+@media screen and (max-width: 900px) {
+  .menu-toggle:checked + .nav .hamburger-menu {
+    display: block;
+  }
+  .memu-toggle {
+    display: none;
+  }
+  nav {
+    display: flex; 
+    flex-direction: column;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 0.2em;
+    font-size: 1.5em;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black; 
+    background-color: grey;
+
+  }
+  .navLinks {
+    font-size: 0.5;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+
+  /*Styler hamburgermenyen */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+  }
+  /* styler hamburgermenyen */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;¨
+    margin: 3px 0;
+
+  }
+}
+
+/* CSS for skjermer stærre enn 900px */
+@media screen and (min-width: 900px) {
+  nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2.5px solid black;
+    border-top: 2.5px solid black;
+    background-color: grey;
+  }
+  /* Skjule menycheckbox knapp */
+  .menu-toggle {
+    display: none;
+  }
+  /* styling av linker i dekstop */
+  .navLinks {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+  .navLinks:hover {
+    color: rgb(221, 205, 143);
+    border-left: 0.5px solid gray;
+    border-right: 0.5px solid gray;
+    padding: 0.5em 0.5em;
+  }
+}
+/* Kolonner i header/navigasjons header */
+.1   
+{
+  grid-column:1;
+}
+
+.2   
+{
+  grid-column:2;
+}
+
+.3 {
+  grid-column:3;
+}
+
+.4 {
+  grid-column:4;
+}
+
+.5 {
+  
+}
+
+/* Styling av header seksjonen 
+header {
+  grid-area: header;
+  font-size: 1.5rem; 
+  font-weight: 600;
+} */
 /* SØKEFELT ØVERST */
 /*
 label {
@@ -187,6 +300,13 @@ label {
 input, label { 
   margin: 0.4rem 0;
 } */
+
+/* flex seksjoner for navigasjonene */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
 
 
 /* for enheter og skjermer med vidde 900 */
@@ -241,36 +361,6 @@ nav {
 .5 {
   
 }
-.nav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background:#18ffa8;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-.nav .search-container button:hover {
-  background: #ccc;
-}
-
-/* font, størrelse i navigasjonsmenyen */
-.navLinks {
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 25em;
-  text-transform: uppercase; 
-  text-decoration: solid;
-  color: black;
-}
-
-.navLinks:hover {
-  color: rgb(221, 205, 143);
-  border-left: 0.5px solid gray;
-  border-right: 0.5px solid gray;
-  padding: 0.5em 0.5em;
-}
-
 #twist {
   color: blue;
 } 
@@ -305,11 +395,6 @@ h2 {
   margin: 1.5%;
  }
 
-
-/* ALTERNATIV GRID SECTION */
-/* g-t-c har ingen effekt her */
-/* sentrerer innholdet til å ligge i vcenter */
-
  section {
   display: block;
   margin-left: auto;
@@ -319,8 +404,6 @@ h2 {
   font-size: 20px;
   text-decoration: solid;
   text-transform: uppercase;
-  /* 
-  grid-template-columns: 15% 60% 25%; */
   background-color:#9ea1c3;
   margin: auto; /* kan fjernes */
   padding: 1px; /* kan fjernes */
@@ -329,17 +412,65 @@ h2 {
 
  }
 
- /* første bilde som møter kunden */
- .image img {
-  width: 100%;
-  height: 100%;
- } 
- .image {
-  position: relative;
+/* Styling for hver individ produkt, bilde, knapp og tekst */ 
+ .products {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
  }
+
+.product_item {
+  padding: 0.5%;
+  flex-grow: 0;
+  flex-basis: 20%
+  font-size: 12px;
+}
+.product_image {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.info {
+  font-size: 12px;
+}
+.buy_button {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 900px) {
+  section {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    text-decoration: solid;
+    text-transform: uppercase; 
+    background-color: white;
+  }
+  .products {
+    display: flex;
+  }
+  .product_item {
+    padding: 0.5%;
+    flex-basis: 30%;
+    font-size: 12px;
+  }
+}
+
+.image {
+  position: relative;
+}
  /* Justerer slik at tekst faller over bilde */
  /* ønsker at teksten faller på bakgrunnen på bilde, slik at tekst blir mer synlig */
- .image figcaption {
+
+.image figcaption {
   position: fixed;
   top: 15%;
   bottom: 95%;
@@ -351,6 +482,168 @@ h2 {
   font-family: none;
   padding: 20px;
  }
+
+   
+ .wrapper figcaption {
+  position: absolute;
+  top:25%;
+  bottom: 75%;
+  left: 30%;
+  font-style: 60px;
+  font-style: italic;
+  color: #18ffa8;
+}
+
+@media only screen and (min-width: 900px) {
+  .image img {
+    width: 100%;
+    height: 100%;
+    position: center;
+  }
+  .image {
+    position: center; 
+  }
+
+  .image figcaption {
+    position: center;
+    top: 4%;
+    bottom: 95%;
+    left: 40%
+    font-size: 40px;
+    font-style: italic;
+    color: black;
+    text-decoration: solid;
+    font-family: fantasy;
+    padding: 20px;
+  }
+  .wrapper figcaptopn {
+    display: none;
+  }
+}
+
+ /* FOOTER */
+
+ .footer-basic {
+  padding: 40px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+ }
+
+  .footer-basic ul {
+   padding: 0;
+   list-style: none;
+   text-align: center;
+   font-size: 18px;
+   line-height: 1.6;
+   margin-bottom: 0;
+  }
+
+  .footer-basic li {
+   padding: 0 10px;
+  }
+
+  .footer-basic ul a {
+   color: inherit;
+   text-decoration: none;
+   opacity: 0.8;
+   }
+
+
+  .footer-basic ul a:hover {
+   opacity:1;
+  }
+
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .footer-basic .social > a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+    max-height: inherit;
+  }
+
+  /* justering av ikoner */
+  .footer-basic img {
+    height: 50%;
+  }
+
+  .footer-basic .social > a:hover {
+    opacity: 0.9;
+  }
+
+  
+  .footer-basic .copyright {
+   margin-top:15px;
+   text-align:center;
+   font-size:13px;
+   color:#aaa;
+   margin-bottom: 0;
+  }
+
+
+
+
+
+.nav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:#18ffa8;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.nav .search-container button:hover {
+  background: #ccc;
+}
+
+/* font, størrelse i navigasjonsmenyen */
+.navLinks {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 25em;
+  text-transform: uppercase; 
+  text-decoration: solid;
+  color: black;
+}
+
+.navLinks:hover {
+  color: rgb(221, 205, 143);
+  border-left: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  padding: 0.5em 0.5em;
+}
+
+
+
+/* ALTERNATIV GRID SECTION */
+/* g-t-c har ingen effekt her */
+/* sentrerer innholdet til å ligge i vcenter */
+
+
+
+ /* første bilde som møter kunden */
+ .image img {
+  width: 100%;
+  height: 100%;
+ } 
+ .image {
+  position: relative;
+ }
+ /* Justerer slik at tekst faller over bilde */
+ /* ønsker at teksten faller på bakgrunnen på bilde, slik at tekst blir mer synlig */
+
 
   /*.Teksten på bilder/linker. Bruker kun fargen for å ha en sterk farge  */  
   
@@ -366,41 +659,7 @@ h2 {
 
   /* FOOTER */
 
-  .footer-basic {
-    padding: 40px 0;
-    background-color: #ffffff;
-    color: #4b4c4d;
-   }
-
-    .footer-basic ul {
-     padding: 0;
-     list-style: none;
-     text-align: center;
-     font-size: 18px;
-     line-height: 1.6;
-     margin-bottom: 0;
-    }
-
-    .footer-basic li {
-     padding: 0 10px;
-    }
-
-    .footer-basic ul a {
-     color: inherit;
-     text-decoration: none;
-     opacity: 0.8;
-     }
-
-
-    .footer-basic ul a:hover {
-     opacity:1;
-    }
-
-    .footer-basic .social {
-      text-align: center;
-      padding-bottom: 25px;
-    }
-
+  
     .footer-basic .social > a {
       font-size: 24px;
       width: 40px;
