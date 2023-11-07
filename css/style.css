@@ -197,7 +197,20 @@ html, body {
   cursor: pointer;
   position: absolute: 
   top: 55px;
-  right: 100%;
+  right:100px;
+}
+
+/* For søkefelt */
+input[type=text] {
+  position: absolute;
+  margin: auto;
+  width: 25%;
+  top: 5%;
+  right: 40%;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+
 }
 
 
