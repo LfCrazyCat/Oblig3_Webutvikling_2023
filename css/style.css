@@ -198,8 +198,33 @@ header, main, content, footer {
   grid-area: header;
  }
 
+ /* space rundt navigasjonslinkene */
+ header nav {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+ }
+ 
+ /* Usikker på denne her= 
+ .navbar {
+  display: none; } OG DENNE HER
+  main section img {
+ width: 100px;
+ OG DENNE: 
+ main article img {
+ width: 100%;
+}
+}
+*/
+
+
 .logo {
-  top: 50px;
+  position: relative;
+  width: 15%;
+  height: 15%;
+  display: block;
+  top: 45px;
+
 }
 
 /* Logo justering størrelse */
